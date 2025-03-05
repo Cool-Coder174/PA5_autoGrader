@@ -38,7 +38,10 @@ pa5, PA5, GrocerySim, or any .exe/.out file.
 
 ```bash
 
-python grading_script.py```
+python grading_script.py 
+
+
+```
 
 **Output**
 ✅ Pass: Test succeeded.
