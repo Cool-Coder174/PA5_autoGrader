@@ -1,0 +1,37 @@
+# Congratulations! You're about to grade PA5. Let the chaos begin.
+# Tests designed to catch students who think 'queue' is a French word.
+tests:
+  - name: "Test 1: Enqueue on Empty Queue"
+    input: "1\n"  # Simulate 1 minute because even TAs have a life
+    expected:
+      - "arrived in line"
+      - "Customer 1"
+      - "service time:"
+
+  - name: "Test 2: Enqueue with One Node (Because One is the Loneliest Number)"
+    input: "2\n"
+    expected:
+      - "arrived in line"
+      - "Customer 2"
+      - "totalTime: 1"  # If their math is wrong, we'll know
+
+  - name: "Test 3: Dequeue One Node (Farewell, Little Node!)"
+    input: "3\n"
+    expected:
+      - "finished checking out"
+      - "Customer 1"
+      - "totalTime: 1"  # RIP, you served well
+
+  - name: "Test 4: Dequeue Two Nodes (Double Trouble)"
+    input: "4\n"
+    expected:
+      - "finished checking out"
+      - "Customer 2"
+      - "totalTime: 3"  # Pray they didn't hardcode this
+
+  - name: "Test 5: 24-Hour Simulation (Are You Still Here?)"
+    input: "1440\n"  # 24*60 minutes. Bring coffee.
+    expected:
+      - "Customer 1"  # Must reset after 24 hours
+      - "reset to 1"
+      - "finished checking out"
